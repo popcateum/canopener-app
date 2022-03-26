@@ -1,8 +1,13 @@
 import { ethers } from 'ethers'
 
 export const ethereum: any | undefined = (window as any).ethereum
-export const provider = new ethers.providers.Web3Provider(ethereum)
-export const signer = provider.getSigner()
+export let provider: any
+export let signer: any
+
+export async function connect() {
+  provider = new ethers.providers.Web3Provider(ethereum)
+  signer = provider.getSigner()
+}
 
 export async function getAddress() {
   const address = await signer.getAddress()

@@ -4,7 +4,7 @@ export const ethereum: any | undefined = (window as any).ethereum
 export let provider: any
 export let signer: any
 
-export async function connect() {
+if (ethereum !== undefined) {
   provider = new ethers.providers.Web3Provider(ethereum)
   signer = provider.getSigner()
 }

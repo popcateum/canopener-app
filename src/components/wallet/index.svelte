@@ -1,6 +1,5 @@
 <script lang="ts">
   import { myAddress, myBalance, myTokenId } from '@/stores/index'
-  import { balanceOf } from '@/contract/index'
 </script>
 
 <div class="info">

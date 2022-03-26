@@ -25,7 +25,7 @@
 </script>
 
 <div class="mint">
-  <div class="text">Canopener CA: 0x00000</div>
+  <div class="text">Canopener CA: 0x6C7739C6bFf4f51174484a7fe74Ad04B7d14fd76</div>
   <img class="img" src="/img/nft.png" alt="nft" />
   {#if $isConnect && whitelist}
     <div class="mint-button" on:click="{minting}">Mint!</div>

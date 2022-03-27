@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { isConnect, myAddress, myBalance, myTokenId } from '@/stores/index'
+  import { isConnect, myAddress, myBalance, myTokenId, totalToken } from '@/stores/index'
   import { ethereum, addChain, requestAccount, getAddress } from '@/chain/index'
-  import { balanceOf, myNFT } from '@/contract'
+  import { balanceOf, myNFT, totalSupply } from '@/contract'
 
   function changed() {
     ethereum.on('accountsChanged', async () => {
@@ -29,7 +29,7 @@
 
   async function getMyTokenData() {
     $myBalance = await balanceOf($myAddress)
-
+    $totalToken = await totalSupply()
     if ($myBalance != 0) {
       $myTokenId = await myNFT($myAddress)
     } else {

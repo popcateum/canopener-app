@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { myAddress, myBalance, myTokenId } from '@/stores/index'
+  import { myAddress, myBalance, myTokenId, totalToken } from '@/stores/index'
 </script>
 
 <div class="info">
@@ -11,6 +11,8 @@
 {:else}
   <div class="info">My Can Opener: 캔오프너가 없습니다.</div>
 {/if}
+
+<div class="info">Total Supply: {$totalToken}</div>
 
 <div class="nft"></div>
 

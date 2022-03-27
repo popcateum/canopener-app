@@ -33,3 +33,8 @@ export async function balanceOf(myAddress: string) {
   const balance = await nftContract.balanceOf(myAddress)
   return balance
 }
+
+export async function totalSupply() {
+  const total = await nftContract.totalSupply()
+  return total
+}
